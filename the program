@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code here
+	int xQ, yQ, xK, yK;
+    scanf("%d%d", &xQ, &yQ);
+    scanf("%d%d", &xK, &yK);
+    if (xQ==xK || yQ == yK||xQ-yQ == xK -yK || xK +yK == xQ +yQ) {
+        printf("Queen can capture knight\n");
+    }
+    else {
+        printf("Queen cannot capture knight\n");
+    }
+    if ((xK-xQ)*(xK-xQ) + (yK-yQ)*(yK-yQ) == 5) {
+        printf("Knight can capture Queen");
+    }
+    else {
+        printf("Knight cannot capture Queen");
+    }
+	return 0;
+}
